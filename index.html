@@ -2,290 +2,326 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PRABHU STUDIO | Photography</title>
+
+<title>PRABHU STUDIO | Best Photography Studio in Tiruppur</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PRABHU STUDIO - Professional photography services in Tiruppur. Wedding photography, baby shoots, and studio portraits with creativity and perfection.">
-<meta name="keywords" content="Prabhu Studio, Photography, Tiruppur, Wedding Photography, Baby Shoots, Portrait Photography">
+
+<meta name="description"
+content="PRABHU STUDIO – Best photography studio in Tiruppur near Nallur Bus Stop. Wedding, baby & event photography with 4.9★ Google customer rating.">
+
+<!-- SPEED OPTIMISATION -->
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="preconnect" href="https://www.google.com">
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"PRABHU STUDIO",
+  "telephone":"+91-93444-61882",
+  "email":"prabhudigitalstudios@gmail.com",
+  "priceRange":"₹₹",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Nallur Bus Stop, Kangeyam Road",
+    "addressLocality":"Tiruppur",
+    "addressRegion":"TN",
+    "postalCode":"641604",
+    "addressCountry":"IN"
+  },
+  "aggregateRating":{
+    "@type":"AggregateRating",
+    "ratingValue":"4.9",
+    "reviewCount":"500"
+  }
+}
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 body{
-    font-family:"Segoe UI",Arial,sans-serif;
-    background:#f8fafc;
-    color:#333;
-    line-height:1.6;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  background:#f9fafb;color:#1f2937;line-height:1.7
 }
 
-/* Header */
+/* HEADER */
 header{
-    background:#ffffff;
-    padding:15px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    position:sticky;
-    top:0;
-    z-index:100;
+  background:#fff;padding:16px 8%;
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100
 }
-header img{height:55px}
-
+header img{height:52px}
 nav a{
-    margin-left:20px;
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
+  margin-left:22px;text-decoration:none;
+  color:#374151;font-weight:500
 }
-nav a:hover{color:#c9a24d}
+nav a:hover{color:#b8963f}
 
-/* Language Switch */
-.lang-switch{
-    display:flex;
-    gap:8px;
-    margin-left:20px;
-}
+/* LANGUAGE */
+.lang-switch{display:flex;gap:8px}
 .lang-switch button{
-    border:none;
-    padding:6px 12px;
-    border-radius:20px;
-    cursor:pointer;
-    font-size:13px;
-    background:#eef2f7;
-    font-weight:600;
-}
-.lang-switch button:hover,
-.lang-switch button.active{
-    background:#c9a24d;
-    color:#fff;
+  border:none;padding:6px 14px;border-radius:20px;
+  background:#f3f4f6;font-weight:600;cursor:pointer
 }
 
-/* Hero */
-.hero{
-    padding:60px 8%;
-    text-align:center;
-}
+/* HERO */
+.hero{padding:70px 8%;text-align:center}
 .hero img{
-    max-width:100%;
-    border-radius:15px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  max-width:100%;border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,.15)
 }
 
-/* Sections */
-section{
-    padding:70px 8%;
-    text-align:center;
-}
-section h2{
-    font-size:32px;
-    margin-bottom:20px;
-}
-section p{
-    max-width:850px;
-    margin:auto;
-    color:#555;
-    font-size:17px;
+/* SECTIONS */
+section{padding:80px 8%;text-align:center}
+h2{font-size:34px;margin-bottom:18px}
+p{
+  max-width:820px;margin:auto;
+  color:#4b5563;font-size:17px
 }
 
-/* Images */
-.image-block img{
-    width:100%;
-    max-width:900px;
-    border-radius:15px;
-    margin-top:30px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+/* RATING */
+.rating-box{
+  margin:40px auto;
+  display:inline-flex;gap:16px;align-items:center;
+  background:#fff;padding:20px 32px;
+  border-radius:60px;
+  box-shadow:0 12px 35px rgba(0,0,0,.1)
+}
+.rating-box span{color:#fbbf24;font-size:22px}
+
+/* TRUST */
+.trust-number{
+  font-size:48px;font-weight:800;
+  color:#b8963f;margin-top:20px
 }
 
-/* Gallery */
+/* REVIEWS */
+.reviews{
+  max-width:700px;margin:30px auto;
+  position:relative;min-height:70px
+}
+.review-text{
+  position:absolute;width:100%;
+  opacity:0;transition:.8s;
+  font-style:italic
+}
+.review-text.active{opacity:1}
+
+/* GALLERY */
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;margin-top:45px
 }
 .gallery img{
-    width:100%;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  width:100%;border-radius:18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.15)
 }
 
-/* Contact Box */
+/* CONTACT */
 .contact-box{
-    background:#ffffff;
-    padding:40px;
-    border-radius:15px;
-    display:inline-block;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  background:#fff;padding:45px;
+  border-radius:20px;
+  display:inline-block;
+  box-shadow:0 14px 40px rgba(0,0,0,.1)
 }
-
-/* Action Buttons */
 .actions{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:30px;
+  display:flex;gap:22px;
+  justify-content:center;margin-top:35px
 }
 .actions a{
-    text-decoration:none;
-    color:#fff;
-    padding:15px 30px;
-    border-radius:50px;
-    font-size:18px;
-    font-weight:600;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  text-decoration:none;color:#fff;
+  padding:16px 36px;border-radius:50px;
+  font-weight:600
 }
-.directions{background:#c9a24d}
-.call{background:#1fa463}
+.directions{background:#b8963f}
+.call{background:#16a34a}
 
-/* Map */
-iframe{
-    width:100%;
-    height:450px;
-    border:0;
-    border-radius:15px;
-    margin-top:30px;
+/* MAP */
+.map-box{
+  margin-top:45px;background:#fff;
+  padding:35px;border-radius:20px;
+  box-shadow:0 16px 40px rgba(0,0,0,.12)
+}
+.map-box iframe{
+  width:100%;height:360px;
+  border:0;border-radius:16px
 }
 
-/* Floating Buttons */
+/* FLOATING */
 .floating-buttons{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    z-index:999;
+  position:fixed;right:20px;bottom:20px;
+  display:flex;flex-direction:column;gap:16px
 }
 .float-btn{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:26px;
-    color:#fff;
-    text-decoration:none;
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  width:60px;height:60px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;color:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+  animation:pulse 1.8s infinite
 }
 .whatsapp{background:#25D366}
-.float-call{background:#1fa463}
+.call-float{background:#16a34a}
+@keyframes pulse{50%{transform:scale(1.08)}}
 
-/* Footer */
-footer{
-    background:#eef2f7;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-    color:#555;
+/* CALL POPUP */
+.call-popup{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.6);
+  display:none;
+  align-items:center;justify-content:center;
+  z-index:999
+}
+.call-box{
+  background:#fff;padding:30px;
+  border-radius:18px;text-align:center
+}
+.call-box a{
+  display:inline-block;margin-top:15px;
+  background:#16a34a;color:#fff;
+  padding:14px 30px;border-radius:40px;
+  text-decoration:none
 }
 
-@media(max-width:768px){
-    header{flex-direction:column}
-    nav{margin-top:10px}
+/* FOOTER */
+footer{
+  background:#f3f4f6;
+  padding:22px;color:#6b7280
 }
 </style>
 </head>
 
 <body>
 
+<!-- SEO H1 (hidden but powerful) -->
+<h1 style="position:absolute;left:-9999px;">
+PRABHU STUDIO – Best Photography Studio in Tiruppur
+</h1>
+
 <header>
-    <img src="logo.png" alt="Prabhu Studio Logo">
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#studio">Studio</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="lang-switch">
-        <button onclick="setLanguage('en')">EN</button>
-        <button onclick="setLanguage('ta')">தமிழ்</button>
-    </div>
+<img src="logo.png" alt="Prabhu Studio Logo" loading="lazy">
+<nav>
+<a href="#home">Home</a>
+<a href="#studio">Studio</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="lang-switch">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('ta')">தமிழ்</button>
+</div>
 </header>
 
-<div class="hero" id="home">
-    <img src="poster.jpg" alt="Prabhu Studio Poster">
-</div>
+<section class="hero" id="home">
+<img src="poster.jpg" alt="Prabhu Studio Photography" loading="lazy">
+</section>
 
 <section>
-    <h2 data-en="About PRABHU STUDIO"
-        data-ta="பிரபு ஸ்டூடியோ பற்றி">
-        About PRABHU STUDIO
-    </h2>
+<h2 data-en="About PRABHU STUDIO" data-ta="பிரபு ஸ்டூடியோ பற்றி">
+About PRABHU STUDIO
+</h2>
 
-    <p data-en="We capture emotions, not just photos. From weddings to baby shoots, PRABHU STUDIO delivers professional photography with creativity and perfection."
-       data-ta="நாங்கள் புகைப்படங்களை மட்டுமல்ல, உணர்வுகளையும் பதிவு செய்கிறோம். திருமணம் முதல் குழந்தை புகைப்படம் வரை சிறந்த தரமான சேவையை வழங்குகிறோம்.">
-        We capture emotions, not just photos. From weddings to baby shoots, PRABHU STUDIO delivers professional photography with creativity and perfection.
-    </p>
+<p data-en="We capture emotions, not just photos."
+data-ta="நாங்கள் புகைப்படங்களை மட்டுமல்ல, உங்கள் வாழ்க்கையின் அழகான நினைவுகளையும் பதிவு செய்கிறோம்.">
+We capture emotions, not just photos.
+</p>
+
+<div class="rating-box">
+<span>★★★★★</span>
+<div><strong>4.9</strong> ★ Google Customer Rating</div>
+</div>
+
+<div class="trust-number">500+ Happy Clients</div>
+
+<div class="reviews">
+<p class="review-text active">“Excellent photography & service.”</p>
+<p class="review-text">“Best photography studio in Tiruppur.”</p>
+<p class="review-text">“Captured our wedding moments beautifully.”</p>
+</div>
 </section>
 
 <section id="studio">
-    <h2 data-en="Our Studio" data-ta="எங்கள் ஸ்டூடியோ">Our Studio</h2>
-    <div class="image-block">
-        <img src="studio.jpg" alt="Prabhu Studio Interior">
-    </div>
+<h2>Our Studio</h2>
+<img src="studio.jpg" alt="Studio Interior" loading="lazy"
+style="max-width:100%;border-radius:18px">
 </section>
 
 <section id="work">
-    <h2 data-en="Our Photography" data-ta="எங்கள் புகைப்படங்கள்">Our Photography</h2>
-    <div class="gallery">
-        <img src="poster.jpg" alt="Wedding Photography - Prabhu Studio">
-        <img src="studio.jpg" alt="Studio Photography - Prabhu Studio">
-    </div>
+<h2>Our Photography</h2>
+<div class="gallery">
+<img src="highlight.jpg" alt="Photography Work" loading="lazy">
+</div>
 </section>
 
 <section id="contact">
-    <h2 data-en="Contact Us" data-ta="தொடர்பு கொள்ள">Contact Us</h2>
+<h2>Contact Us</h2>
 
-    <div class="contact-box">
-        <p>Nallur Bus Stop, Kangeyam Road, Tiruppur</p>
-        <p>📞 93444 61882</p>
-        <p>✉️ prabhudigitalstudios@gmail.com</p>
-    </div>
+<div class="contact-box">
+<p>Nallur Bus Stop, Kangeyam Road, Tiruppur</p>
+<p>📞 93444 61882</p>
+<p>✉️ prabhudigitalstudios@gmail.com</p>
+</div>
 
-    <div class="actions">
-        <a class="directions"
-           href="https://www.google.com/maps/dir/?api=1&destination=Nallur+Bus+Stop,+Kangeyam+Road,+Tiruppur"
-           target="_blank">🧭 Get Directions</a>
+<div class="actions">
+<a class="directions"
+href="https://www.google.com/maps/dir/?api=1&destination=Nallur+Bus+Stop,+Kangeyam+Road,+Tiruppur"
+target="_blank" rel="noopener">
+Get Directions
+</a>
+<a class="call" onclick="openCall()">Call Now</a>
+</div>
 
-        <a class="call" href="tel:+919344461882">📞 Call Now</a>
-    </div>
-
-    <iframe
-        src="https://www.google.com/maps?q=Nallur%20Bus%20Stop,%20Kangeyam%20Road,%20Tiruppur&output=embed"
-        loading="lazy">
-    </iframe>
+<div class="map-box">
+<p style="margin-bottom:15px;color:#4b5563">
+PRABHU STUDIO is located near Nallur Bus Stop on Kangeyam Road, Tiruppur.
+Easy to reach by bike, car, or bus.
+</p>
+<iframe loading="lazy"
+src="https://www.google.com/maps?q=Nallur+Bus+Stop,+Kangeyam+Road,+Tiruppur&output=embed">
+</iframe>
+</div>
 </section>
 
 <footer>
-    © 2026 PRABHU STUDIO | Professional Photography
+© <span id="year"></span> PRABHU STUDIO
 </footer>
 
-<!-- Floating Buttons -->
 <div class="floating-buttons">
-    <a href="https://wa.me/919344461882" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#fff">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-    <a href="tel:+919344461882" class="float-btn float-call" aria-label="Call Now">📞</a>
+<a class="float-btn whatsapp" href="https://wa.me/919344461882">🟢</a>
+<a class="float-btn call-float" onclick="openCall()">📞</a>
 </div>
 
-<script>
-function setLanguage(lang){
-    document.querySelectorAll("[data-en]").forEach(el=>{
-        el.textContent = el.getAttribute("data-"+lang);
-    });
-    document.querySelectorAll(".lang-switch button").forEach(btn=>{
-        btn.classList.remove("active");
-    });
-    document.querySelector(".lang-switch button[onclick*=\"'"+lang+"'\"]").classList.add("active");
+<div class="call-popup" id="callPopup">
+<div class="call-box">
+<h3>Call PRABHU STUDIO</h3>
+<a href="tel:+919344461882">📞 93444 61882</a><br><br>
+<button onclick="closeCall()">Close</button>
+</div>
+</div>
+
+<script defer>
+function setLanguage(l){
+  localStorage.setItem("lang",l);
+  document.querySelectorAll("[data-en]").forEach(e=>{
+    const t=e.getAttribute("data-"+l);
+    if(t) e.textContent=t;
+  });
 }
-// Set English as default active
-document.addEventListener("DOMContentLoaded", function(){
-    document.querySelector(".lang-switch button[onclick*=\"'en'\"]").classList.add("active");
-});
+function openCall(){callPopup.style.display="flex"}
+function closeCall(){callPopup.style.display="none"}
+document.getElementById("year").textContent=new Date().getFullYear();
+
+let i=0;
+setInterval(()=>{
+  const r=document.querySelectorAll(".review-text");
+  r.forEach(x=>x.classList.remove("active"));
+  i=(i+1)%r.length;
+  r[i].classList.add("active");
+},4000);
 </script>
 
 </body>
