@@ -1,12 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRABHU STUDIO</title>
+<meta charset="UTF-8">
+<title>PRABHU STUDIO | Photography</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#f8fafc;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:#ffffff;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+header img{height:55px}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+nav a:hover{color:#c9a24d}
+
+/* Language Switch */
+.lang-switch{
+    display:flex;
+    gap:8px;
+    margin-left:20px;
+}
+.lang-switch button{
+    border:none;
+    padding:6px 12px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:13px;
+    background:#eef2f7;
+    font-weight:600;
+}
+.lang-switch button:hover{
+    background:#c9a24d;
+    color:#fff;
+}
+
+/* Hero */
+.hero{
+    padding:60px 8%;
+    text-align:center;
+}
+.hero img{
+    max-width:100%;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+section{
+    padding:70px 8%;
+    text-align:center;
+}
+section h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+section p{
+    max-width:850px;
+    margin:auto;
+    color:#555;
+    font-size:17px;
+}
+
+/* Images */
+.image-block img{
+    width:100%;
+    max-width:900px;
+    border-radius:15px;
+    margin-top:30px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Gallery */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Contact Box */
+.contact-box{
+    background:#ffffff;
+    padding:40px;
+    border-radius:15px;
+    display:inline-block;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Action Buttons */
+.actions{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+.actions a{
+    text-decoration:none;
+    color:#fff;
+    padding:15px 30px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+.directions{background:#c9a24d}
+.call{background:#1fa463}
+
+/* Map */
+iframe{
+    width:100%;
+    height:450px;
+    border:0;
+    border-radius:15px;
+    margin-top:30px;
+}
+
+/* Floating Buttons */
+.floating-buttons{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:999;
+}
+.float-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    color:#fff;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+.whatsapp{background:#25D366}
+.float-call{background:#1fa463}
+
+/* Footer */
+footer{
+    background:#eef2f7;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    color:#555;
+}
+
+@media(max-width:768px){
+    header{flex-direction:column}
+    nav{margin-top:10px}
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to PRABHU STUDIO</h1>
-    <p>Your one-stop destination for all your needs.</p>
+
+<header>
+    <img src="logo.png" alt="Prabhu Studio Logo">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#studio">Studio</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang-switch">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('ta')">தமிழ்</button>
+    </div>
+</header>
+
+<div class="hero" id="home">
+    <img src="poster.jpg" alt="Prabhu Studio Poster">
+</div>
+
+<section>
+    <h2 data-en="About PRABHU STUDIO"
+        data-ta="பிரபு ஸ்டூடியோ பற்றி">
+        About PRABHU STUDIO
+    </h2>
+
+    <p data-en="We capture emotions, not just photos. From weddings to baby shoots, PRABHU STUDIO delivers professional photography with creativity and perfection."
+       data-ta="நாங்கள் புகைப்படங்களை மட்டுமல்ல, உணர்வுகளையும் பதிவு செய்கிறோம். திருமணம் முதல் குழந்தை புகைப்படம் வரை சிறந்த தரமான சேவையை வழங்குகிறோம்.">
+        We capture emotions, not just photos. From weddings to baby shoots, PRABHU STUDIO delivers professional photography with creativity and perfection.
+    </p>
+</section>
+
+<section id="studio">
+    <h2 data-en="Our Studio" data-ta="எங்கள் ஸ்டூடியோ">Our Studio</h2>
+    <div class="image-block">
+        <img src="studio.jpg">
+    </div>
+</section>
+
+<section id="work">
+    <h2 data-en="Our Photography" data-ta="எங்கள் புகைப்படங்கள்">Our Photography</h2>
+    <div class="gallery">
+        <img src="highlight.jpg">
+    </div>
+</section>
+
+<section id="contact">
+    <h2 data-en="Contact Us" data-ta="தொடர்பு கொள்ள">Contact Us</h2>
+
+    <div class="contact-box">
+        <p>Nallur Bus Stop, Kangeyam Road, Tiruppur</p>
+        <p>📞 93444 61882</p>
+        <p>✉️ prabhudigitalstudios@gmail.com</p>
+    </div>
+
+    <div class="actions">
+        <a class="directions"
+           href="https://www.google.com/maps/dir/?api=1&destination=Nallur+Bus+Stop,+Kangeyam+Road,+Tiruppur"
+           target="_blank">🧭 Get Directions</a>
+
+        <a class="call" href="tel:+919344461882">📞 Call Now</a>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps?q=Nallur%20Bus%20Stop,%20Kangeyam%20Road,%20Tiruppur&output=embed"
+        loading="lazy">
+    </iframe>
+</section>
+
+<footer>
+    © 2026 PRABHU STUDIO | Professional Photography
+</footer>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <a href="https://wa.me/919344461882" target="_blank" class="float-btn whatsapp">🟢</a>
+    <a href="tel:+919344461882" class="float-btn float-call">📞</a>
+</div>
+
+<script>
+function setLanguage(lang){
+    document.querySelectorAll("[data-en]").forEach(el=>{
+        el.textContent = el.getAttribute("data-"+lang);
+    });
+}
+</script>
+
 </body>
 </html>
